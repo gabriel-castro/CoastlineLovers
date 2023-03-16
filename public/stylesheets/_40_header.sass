@@ -1,0 +1,66 @@
+#header
+	//@media screen and (min-width: $xs) and (max-width: $lg - 1)
+	height: 100vh
+	background-image: url("/assets/gruta-tour.jpg")
+	background-repeat: no-repeat
+	background-position: center
+	background-size: cover
+
+	.head__box
+		display: grid
+		grid-template-columns: 1fr
+		grid-template-rows: 1fr 1fr
+		@media screen and (min-width: $xs) and (max-width: $sm - 1)
+			height: 98vh
+		@media screen and (min-width: $sm) and (max-width: $lg - 1)
+			height: 93vh
+		@media screen and (min-width: $lg)
+			height: 100vh
+
+	.head__title
+		grid-row-start: 1
+		grid-row-end: 2
+		grid-column-start: 1
+		grid-column-end: 2
+		text-align: center
+		@media screen and (min-width: $xs) and (max-width: $sm - 1)
+			margin-top: 75px
+			padding: 0 30px
+			align-self: center
+		@media screen and (min-width: $sm) and (max-width: $md - 1)
+			margin-bottom: 20px
+			padding: 0 55px
+			align-self: end
+		@media screen and (min-width: $md)
+			//margin-bottom: 50px
+			padding: 0 55px
+			align-self: end
+
+	.head__text
+		grid-row-start: 2
+		grid-row-end: 3
+		grid-column-start: 1
+		grid-column-end: 2
+		align-self: start
+		text-align: center
+		@media screen and (min-width: $xs) and (max-width: $sm - 1)
+			margin-top: -10px
+			padding: 0 20px
+		@media screen and (min-width: $sm) and (max-width: $md - 1)
+			margin-top: -20px
+			padding: 0 20px
+
+	.head__button
+		grid-row-start: 2
+		grid-row-end: 3
+		grid-column-start: 1
+		grid-column-end: 2
+		align-self: end
+		text-align: center
+		padding: 15% 12%
+
+
+
+
+
+

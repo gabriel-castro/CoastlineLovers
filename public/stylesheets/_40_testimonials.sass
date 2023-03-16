@@ -1,0 +1,79 @@
+#testimonials
+	display: grid
+	grid-template-columns: 1fr
+	@media screen and (min-width: $xs) and (max-width: $md - 1)
+		grid-template-rows: 1fr 3fr
+	@media screen and (min-width: $md) and (max-width: $xl - 1)
+		grid-template-rows: 1.5fr 3fr
+	@media screen and (min-width: $xl) and (max-width: $xxl - 1)
+		grid-template-rows: 120px 500px 
+	@media screen and (min-width: $xxl)
+		grid-template-rows: 150px 550px 
+
+	.testimonials__title
+		grid-row-start: 1
+		grid-row-end: 2
+		grid-column-start: 1
+		grid-column-end: 2
+		text-align: center
+		@media screen and (min-width: $xs) and (max-width: $md - 1)
+			padding: auto
+		@media screen and (min-width: $md)
+			align-self: start
+			padding: 0 60px
+			@media screen and (min-width: $xl)
+				margin-top: -60px
+			
+
+
+	.testimonials__box
+		grid-row-start: 2
+		grid-row-end: 3
+		grid-column-start: 1
+		grid-column-end: 2
+		text-align: center
+		background: url("/assets/testimonials.jpg") no-repeat center
+		@media screen and (min-width: $xs) and (max-width: $md - 1)
+			margin: 0 -2.5% 0 -2.5%
+		@media screen and (min-width: $md)
+			display: grid
+			grid-template-rows: 1fr 1fr 1fr
+			background-size: cover
+			@media screen and (min-width: $md) and (max-width: $lg - 1)
+				grid-template-columns: 1fr 1fr
+			@media screen and (min-width: $lg) and (max-width: $xl - 1)
+				grid-template-columns: 1fr 0.5fr 1fr
+			@media screen and (min-width: $xl) and (max-width: $xxl - 1)
+				grid-template-columns: 1fr 1fr 1fr
+			@media screen and (min-width: $xxl)
+				grid-template-columns: 0.2fr 350px 1fr 1fr
+
+
+	.testimonials__text
+		background-color: rgba(14,51,86, 0.5)
+		h3
+			text-align: left
+		@media screen and (min-width: $xs) and (max-width: $md - 1)
+			padding: 0.75em 1em
+		@media screen and (min-width: $md)
+			grid-row-start: 1
+			grid-row-end: 3
+			padding: 2em 1.5em
+			@media screen and (min-width: $md) and (max-width: $xxl - 1)
+				grid-column-start: 1
+				grid-column-end: 2
+			@media screen and (min-width: $xxl)
+				grid-column-start: 2
+				grid-column-end: 3
+
+
+
+
+
+
+
+
+
+
+
+			 

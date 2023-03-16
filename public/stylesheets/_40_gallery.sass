@@ -1,0 +1,36 @@
+#gallery
+	.gallery__box
+		display: grid
+		grid-template-columns: 1fr
+		text-align: center
+		@media screen and (min-width: $xs) and (max-width: $lg - 1)
+			grid-template-rows: 1fr 1fr 2fr
+		@media screen and (min-width: $lg)
+			grid-row-gap: 50px
+
+	.gallery__text
+		grid-row-start: 1
+		grid-row-end: 2
+		grid-column-start: 1
+		grid-column-end: 2
+		text-align: center
+		h4
+			margin: 0
+			padding: 0 10%
+
+	.gallery__follow
+		grid-row-start: 2
+		grid-row-end: 3
+		grid-column-start: 1
+		grid-column-end: 2
+		text-align: center
+		align-self: end
+
+
+	.gallery__insta__api
+		grid-row-start: 3
+		grid-row-end: 4
+		grid-column-start: 1
+		grid-column-end: 2
+
+

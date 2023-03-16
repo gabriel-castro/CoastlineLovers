@@ -1,0 +1,327 @@
+#easy-bar
+	background-color: $dark-blue
+
+	.easy-bar
+		display: grid
+		grid-template-rows: 1fr
+		@media screen and (min-width: $xs) and (max-width: $md - 1)
+			grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+		@media screen and (min-width: $md) and (max-width: $lg - 1)
+			grid-template-columns: 0.5fr 0.5fr 2fr 3fr 1fr
+		@media screen and (min-width: $lg)
+			grid-template-columns: 1fr 3fr 3fr 5fr
+
+		.easy__item-1
+			grid-row-start: 1
+			grid-row-end: 2
+			@media screen and (min-width: $xs) and (max-width: $md - 1)
+				grid-column-start: 1
+				grid-column-end: 2
+				justify-self: center
+			@media screen and (min-width: $md) and (max-width: $lg - 1)
+				grid-column-start: 1
+				grid-column-end: 2
+				justify-self: right
+			@media screen and (min-width: $lg)
+				grid-column-start: 1
+				grid-column-end: 2
+				justify-self: left
+					//i
+						//display: none
+
+		.easy__item-2
+			grid-row-start: 1
+			grid-row-end: 2
+			@media screen and (min-width: $xs) and (max-width: $md - 1)
+				grid-column-start: 2
+				grid-column-end: 3
+				justify-self: center
+			@media screen and (min-width: $md) and (max-width: $lg - 1)
+				grid-column-start: 2
+				grid-column-end: 3
+				justify-self: right 
+			@media screen and (min-width: $lg)
+				grid-column-start: 1
+				grid-column-end: 2
+				justify-self: center
+				//@media screen and (min-width: $lg)   
+					//i
+						//display: none
+
+		.easy__item-3
+			grid-row-start: 1
+			grid-row-end: 2
+			@media screen and (min-width: $xs) and (max-width: $md - 1)
+				grid-column-start: 3
+				grid-column-end: 4
+				justify-self: center
+			@media screen and (min-width: $md) and (max-width: $lg - 1)
+				grid-column-start: 3
+				grid-column-end: 4
+				justify-self: center				
+			@media screen and (min-width: $lg)
+				grid-column-start: 2
+				grid-column-end: 3
+				justify-self: left
+			.fa-phone-alt
+				display: inline
+			.easy__phone
+				@media screen and (min-width: $xs) and (max-width: $md - 1)
+					display: none
+				@media screen and (min-width: $md)
+					display: inline
+					margin-left: 10px
+
+		.easy__item-4
+			grid-row-start: 1
+			grid-row-end: 2
+			@media screen and (min-width: $xs) and (max-width: $md - 1)
+				grid-column-start: 4
+				grid-column-end: 5
+				justify-self: center					
+			@media screen and (min-width: $md) and (max-width: $lg - 1)
+				grid-column-start: 4
+				grid-column-end: 5
+				justify-self: center
+				align-self: center
+			@media screen and (min-width: $lg)
+				grid-column-start: 3
+				grid-column-end: 4
+				justify-self: center
+			.fa-envelope
+				display: inline
+			.easy__mail
+				@media screen and (min-width: $xs) and (max-width: $md - 1)
+					display: none
+				@media screen and (min-width: $md)
+					display: inline
+					margin-left: 10px
+		
+		.easy__item-5
+			grid-row-start: 1
+			grid-row-end: 2
+			align-self: start
+			@media screen and (min-width: $xs) and (max-width: $md - 1)
+				grid-column-start: 5
+				grid-column-end: 6
+				justify-self: center
+			@media screen and (min-width: $md) and (max-width: $lg - 1)
+				grid-column-start: 5
+				grid-column-end: 6
+				justify-self: center				
+			@media screen and (min-width: $lg)
+				grid-column-start: 4
+				grid-column-end: 5
+				justify-self: right
+
+			.easy__dropdown
+			  display: grid
+			  grid-template-rows: 1fr
+			  grid-template-columns: 1fr 1fr
+			  margin-top: -2px
+
+			.easy__dropbtn
+				grid-row-start: 1
+				grid-row-end: 2
+				grid-column-start: 1
+				grid-column-end: 2
+				align-self: start
+				display: inline
+				@media screen and (min-width: $xs) and (max-width: $md - 1)
+					margin-right: 2px
+				@media screen and (min-width: $md)
+					margin-right: 5px
+
+			.fa-sort-down
+				grid-row-start: 1
+				grid-row-end: 2
+				grid-column-start: 2
+				grid-column-end: 3
+				align-self: start
+				justify-self: center
+				color: $white
+
+			.easy__dropdown-content
+				text-align: left
+				display: none
+				position: absolute
+				z-index: 50
+				text-align: center
+				background-color: $dark-blue
+				border: 1px solid $white
+				border-radius: 10px
+				padding: 5px 5px 5px 7px
+				@media screen and (min-width: $xs) and (max-width: $md - 1)
+					width: 175px
+					top: 35px
+					right: 8%
+				@media screen and (min-width: $md)
+					width: 200px
+					top: 35px
+					@media screen and (min-width: $md) and (max-width: $lg - 1)
+						right: 11.5%
+					@media screen and (min-width: $lg) and (max-width: $xl - 1)
+						right: 7.5%
+					@media screen and (min-width: $xl) and (max-width: $xxl - 1)
+						right: 8%
+					@media screen and (min-width: $xxl)
+						right: 6%
+
+				.easy__flag-1, .easy__flag-2, .easy__flag-3, .easy__flag-4
+					display: inline
+					margin: 0px 10px
+
+			img
+		  	width: auto
+		  	@media screen and (min-width: $xs) and (max-width: $md - 1)
+		  		height: 20px
+		  	@media screen and (min-width: $md)
+		  		height: 25px
+
+		.easy__item-1:hover, .easy__item-2:hover, .easy__item-3:hover, .easy__item-4:hover
+			color: $light-blue
+						
+
+#navbar
+	position: absolute
+	z-index: 2
+	@media screen and (min-width: $xs) and (max-width: $md - 1)
+		width: 90%
+	@media screen and (min-width: $md) and (max-width: $lg - 1)
+		width: 85%
+
+	.nav__box
+		display: grid
+		@media screen and (min-width: $xs) and (max-width: $lg - 1)
+			grid-template-rows: 1fr
+			grid-template-columns: 1fr 1fr
+
+		@media screen and (min-width: $lg)
+			grid-template-rows: 1fr
+			width: 100%
+			@media screen and (min-width: $lg)
+				grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 
+
+		a
+			color: $white
+
+	.nav__logo
+		@media screen and (min-width: $xs) and (max-width: $lg - 1)
+			grid-row-start: 1
+			grid-row-end: 2
+			grid-column-start: 1
+			grid-column-end: 2
+			text-align: left
+		@media screen and (min-width: $lg)
+			grid-row-start: 1
+			grid-row-end: 2
+			grid-column-start: 4
+			grid-column-end: 5
+			text-align: center
+		@media screen and (min-width: $lg) and (max-width: $xl - 1)
+			margin-left: 10px
+			margin-right: -10px
+
+		@media screen and (min-width: $xs) and (max-width: $md - 1)
+			padding-left: 20px
+		img
+			height: auto
+			@media screen and (min-width: $xs) and (max-width: $md - 1)
+				width: 75%
+			@media screen and (min-width: $md) and (max-width: $lg - 1)
+				width: 50%
+			@media screen and (min-width: $lg) and (max-width: $xl - 1)
+				width: 100%
+				margin-top: -11px
+			@media screen and (min-width: $xl) and (max-width: $xxl - 1)
+				width: 100%
+				margin-top: -20px
+			@media screen and (min-width: $xxl)
+				width: 100%
+				margin-top: -25px
+
+	.nav__about
+		@media screen and (min-width: $lg)
+			grid-row-start: 1
+			grid-row-end: 2
+			grid-column-start: 1
+			grid-column-end: 2
+			text-align: center
+
+
+	.nav__tours
+		@media screen and (min-width: $lg)
+			grid-row-start: 1
+			grid-row-end: 2
+			grid-column-start: 2
+			grid-column-end: 3
+			text-align: center
+
+	.nav__rents
+		@media screen and (min-width: $lg)
+			grid-row-start: 1
+			grid-row-end: 2
+			grid-column-start: 3
+			grid-column-end: 4
+			text-align: center
+
+	.nav__safety
+		@media screen and (min-width: $lg)
+			grid-row-start: 1
+			grid-row-end: 2
+			grid-column-start: 5
+			grid-column-end: 6
+			text-align: center 
+	
+	.nav__testimonials
+		@media screen and (min-width: $lg)
+			grid-row-start: 1
+			grid-row-end: 2
+			grid-column-start: 6
+			grid-column-end: 7
+			text-align: center
+
+	.nav__gallery
+		@media screen and (min-width: $lg)
+			grid-row-start: 1
+			grid-row-end: 2
+			grid-column-start: 7
+			grid-column-end: 8
+			text-align: center
+				
+
+	.nav__menu
+		overflow: hidden
+		position: fixed
+		z-index: 100
+		@media screen and (min-width: $xs) and (max-width: $xl - 1)
+			//grid-row-start: 1
+			//grid-row-end: 2
+			//grid-column-start: 2
+			//grid-column-end: 3
+			text-align: right
+			justify-self: right
+			margin-top: 5%
+			right: 10%
+
+	.menu__links
+		text-align: right
+		display: none
+		background-color: $dark-blue //$white //rgba(0, 0, 0, 0.4)
+		border: 1px solid $white
+		border-radius: 10px
+		padding: 25px 10px 0 100px
+		a
+			margin-bottom: 25px
+			font-size: 18px
+
+	.nav__menu a
+	  color: $white //$dark-blue
+	  text-decoration: none
+	  display: block
+
+	.nav__menu a.icon
+	  display: block
+	  right: 0
+	  top: 0 
+

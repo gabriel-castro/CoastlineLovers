@@ -1,0 +1,73 @@
+// Breakpoints
+$xxl: 1440px
+$xl: 1280px
+$lg: 1024px 
+$md: 768px
+$smp: 411px
+$sm: 375px
+$xs: 320px
+
+// Colors
+$white: #FFFFFF
+$black: #000000
+$dark-blue: #0E3356 // rgb(14,51,86)
+$mid-blue: #0055A3 // rgb(0,85,163)
+$light-blue: #6CBDEA // rgb(108,189,234)
+$gold: #CCA14B
+$mid-gold: rgba(204, 161, 77, 0.7)
+$light-gold: rgba(204, 161, 75, 0.2)
+$green: #329736
+$pink: #DD2A7B
+
+
+// Background colors 
+
+
+// Hide large and xl
+.hide__lg
+	@media screen and (min-width: $lg)
+		display: none
+
+// Hide medium, large and xl
+.hide__md
+	@media screen and (min-width: $md)
+		display: none
+
+// Hide small and medium
+.hide__sm
+	@media screen and (min-width: $xs) and (max-width: $lg - 1)
+		display: none 
+
+// Hide only small
+.hide__s
+	@media screen and (min-width: $xs) and (max-width: $md - 1)
+		display: none
+
+// Hover
+.hover__effect
+	display: inline-block
+	vertical-align: middle
+	transform: translateZ(0)
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0)
+	backface-visibility: hidden
+	-moz-osx-font-smoothing: grayscale
+	transition-duration: 0.3s
+	transition-property: transform
+
+.hover__effect:hover, .hover__effect:focus, .hover__effect:active
+	transform: scale(1.1)
+
+
+// Font Awesome size
+.fa-2x
+	//@media screen and (min-width: $md) and (max-width: $lg - 1)
+		//display: none
+
+
+
+
+
+
+
+
+

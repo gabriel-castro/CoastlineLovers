@@ -1,0 +1,25 @@
+--
+-- Table structure for table `bookings`
+--
+
+CREATE TABLE `bookings` {
+  `ID` SERIAL NOT NULL,
+  `primeiroNome` varchar100 NOT NULL,
+  `ultimoNome` varchar100 NOT NULL,
+  `email` varchar100 NOT NULL,
+  `telefone` varchar50 NOT NULL,
+  `tour` varchar20 NOT NULL,
+  `lugares` int2 NOT NULL,
+  `bebes` int2 NOT NULL,
+  `observacoes` varchar500 NOT NULL,
+  `data` date NOT NULL,
+  `hora` varchar50 NOT NULL,
+  `preco` int6 NOT NULL,
+  `aReceber` varchar1000 NOT NULL,
+  `aPagar` varchar1000 NOT NULL,
+  `info_apagada` varchar10000 NOT NULL
+}; ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+
+

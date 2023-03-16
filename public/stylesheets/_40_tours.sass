@@ -1,0 +1,221 @@
+#tours	
+	.tours__box
+		display: grid
+		@media screen and (min-width: $xs) and (max-width: $md - 1)
+			grid-template-columns: 100%
+			width: 100%
+			@media screen and (min-width: $xs) and (max-width: $sm - 1)
+				grid-template-rows: 2.5fr 1fr 1fr 1fr
+			@media screen and (min-width: $sm) and (max-width: $md - 1)
+				grid-template-rows: 2.3fr 1fr 1fr 1fr
+		@media screen and (min-width: $md) and (max-width: $lg - 1)
+			grid-template-columns: 100%
+			grid-template-rows: 1.5fr 1fr 1fr 1fr
+		@media screen and (min-width: $lg)
+			grid-template-rows: 1.3fr 1.5fr
+			grid-template-columns: 1fr 1fr 1fr
+			@media screen and (min-width: $lg) and (max-width: $xl - 1)
+				grid-column-gap: 1.5%
+			@media screen and (min-width: $xl) and (max-width: $xxl - 1)
+				grid-column-gap: 3%
+			@media screen and (min-width: $xxl)
+				grid-column-gap: 6%
+
+	.tours__title
+		@media screen and (min-width: $xs) and (max-width: $lg - 1)
+			grid-row-start: 1
+			grid-row-end: 2
+			grid-column-start: 1
+			grid-column-end: 2
+			text-align: center
+			align-self: start
+			margin-top: 50px
+		@media screen and (min-width: $lg)
+			grid-row-start: 1
+			grid-row-end: 2
+			grid-column-start: 1
+			grid-column-end: 4
+			text-align: center
+			align-self: start
+
+	.tours__text
+		@media screen and (min-width: $xs) and (max-width: $lg - 1)
+			grid-row-start: 1
+			grid-row-end: 2
+			grid-column-start: 1
+			grid-column-end: 2
+			text-align: justify
+			align-self: end
+		@media screen and (min-width: $lg)
+			grid-row-start: 1
+			grid-row-end: 2
+			grid-column-start: 1
+			grid-column-end: 4
+			text-align: center
+			align-self: end
+			margin-bottom: 20px
+		h5
+			text-align: center
+			@media screen and (min-width: $xs) and (max-width: $md - 1)
+				margin-bottom: 50px
+
+
+	.tours-1
+		@media screen and (min-width: $xs) and (max-width: $lg - 1)
+			grid-row-start: 2
+			grid-row-end: 3
+			grid-column-start: 1
+			grid-column-end: 2
+			width: 100%
+		@media screen and (min-width: $lg)
+			grid-row-start: 2
+			grid-row-end: 3
+			grid-column-start: 1
+			grid-column-end: 2
+			text-align: center
+			align-self: start
+
+	.tours-2
+		@media screen and (min-width: $xs) and (max-width: $lg - 1)
+			grid-row-start: 3
+			grid-row-end: 4
+			grid-column-start: 1
+			grid-column-end: 2
+			width: 100%
+		@media screen and (min-width: $lg)
+			grid-row-start: 2
+			grid-row-end: 3
+			grid-column-start: 2
+			grid-column-end: 3
+			text-align: center
+			align-self: start
+
+	.tours-3
+		@media screen and (min-width: $xs) and (max-width: $lg - 1)
+			grid-row-start: 4
+			grid-row-end: 5
+			grid-column-start: 1
+			grid-column-end: 2
+			width: 100%
+		@media screen and (min-width: $lg)
+			grid-row-start: 2
+			grid-row-end: 3
+			grid-column-start: 3
+			grid-column-end: 4
+			text-align: center
+			align-self: start
+
+	.tours-1, .tours-2, .tours-3
+		display: grid
+		@media screen and (min-width: $xs) and (max-width: $md - 1)
+			grid-template-rows: 200px
+			grid-template-columns: 1fr
+			margin: 20px 0 
+		@media screen and (min-width: $md) and (max-width: $lg - 1)
+			grid-template-rows: 300px
+			grid-template-columns: 1fr
+			margin: 20px 0
+		@media screen and (min-width: $lg)
+			grid-template-rows: 524px 50px
+			grid-template-columns: 1fr
+
+		//@media screen and (min-width: $lg)
+
+
+	.tours__photo-1, .tours__photo-2, .tours__photo-3
+		@media screen and (min-width: $xs) and (max-width: $lg - 1)
+			grid-row-start: 1
+			grid-row-end: 2
+			grid-column-start: 1
+			grid-column-end: 2
+			overflow: hidden
+			@media screen and (min-width: $xs) and (max-width: $md - 1)
+				margin: 0 -1em // Sair da box
+			@media screen and (min-width: $md) and (max-width: $lg - 1)
+				margin: 0 -3.5em
+			img
+				max-width: 100%
+				width: 100%
+				height: auto
+		@media screen and (min-width: $lg)
+			grid-row-start: 1
+			grid-row-end: 2
+			grid-column-start: 1
+			grid-column-end: 2
+			overflow: hidden
+
+	.tours__photo-1 img
+		@media screen and (min-width: $xs) and (max-width: $md - 1)
+			margin-top: -120px
+		@media screen and (min-width: $md) and (max-width: $lg - 1)
+			margin-top: -280px
+		@media screen and (min-width: $lg) and (max-width: $xxl - 1)
+			height: 524px
+			width: auto
+			position: relative
+			left: -5%
+		@media screen and (min-width: $xxl)
+			height: 100%
+			width: auto
+			max-height: 100%
+			//max-width: 100%
+	.tours__photo-2 img, .tours__photo-3 img
+		@media screen and (min-width: $md) and (max-width: $lg - 1)
+			margin-top: -80px
+		@media screen and (min-width: $lg) and (max-width: $xxl - 1)
+			height: 524px
+			width: auto
+			position: relative
+			left: -100%
+		@media screen and (min-width: $xxl)
+			height: 100%
+			width: auto
+			max-height: 100%
+			position: relative
+			left: -250px
+			//max-width: 100%
+
+	.tours__text-1, .tours__text-2, .tours__text-3
+		@media screen and (min-width: $xs) and (max-width: $lg - 1)
+			grid-row-start: 1
+			grid-row-end: 2
+			grid-column-start: 1
+			grid-column-end: 2
+			align-self: center
+			text-align: center
+			background-color: rgba(204, 161, 77, 0.7)
+			@media screen and (min-width: $xs) and (max-width: $md - 1)
+				margin: 0 -1em // Sair da box
+			@media screen and (min-width: $md) and (max-width: $lg - 1)
+				margin: 0 -3.5em
+		@media screen and (min-width: $lg)
+			grid-row-start: 2
+			grid-row-end: 3
+			grid-column-start: 1
+			grid-column-end: 2
+			align-self: center
+			margin-top: -3%
+
+	.tours__text-1
+		@media screen and (min-width: $xs) and (max-width: $lg - 1)
+			background-color: rgba(14,51,86, 0.6)
+		@media screen and (min-width: $lg)
+			background-color: $dark-blue
+	.tours__text-2
+		@media screen and (min-width: $xs) and (max-width: $lg - 1)
+			background-color: rgba(0,85,163, 0.6)
+		@media screen and (min-width: $lg)
+			background-color: $mid-blue
+	.tours__text-3
+		@media screen and (min-width: $xs) and (max-width: $lg - 1)
+			background-color: rgba(108,189,234, 0.6)
+		@media screen and (min-width: $lg)
+			background-color: $light-blue
+
+
+
+
+
+
+
+

@@ -1,0 +1,291 @@
+#rents	
+	.rents__box
+		display: grid
+		@media screen and (min-width: $xs) and (max-width: $md - 1)
+			grid-template-columns: 100%
+			width: 100%
+			@media screen and (min-width: $xs) and (max-width: $sm - 1)
+				grid-template-rows: 2.3fr 1fr 1fr 1fr 1fr 1fr 1fr
+			@media screen and (min-width: $sm) and (max-width: $md - 1)
+				grid-template-rows: 2fr 1fr 1fr 1fr 1fr 1fr 1fr
+
+		@media screen and (min-width: $md) and (max-width: $lg - 1)
+			grid-template-columns: 100%
+			grid-template-rows: 1.2fr 1fr 1fr 1fr 1fr 1fr 1fr
+		@media screen and (min-width: $lg)
+			grid-template-columns: 1fr
+			grid-row-gap: 40px
+			@media screen and (min-width: $lg) and (max-width: $xl - 1)
+				grid-template-rows: 2fr 1fr 1fr 1fr 1fr 1fr 1fr
+			@media screen and (min-width: $xl)
+				grid-template-rows: 1.7fr 1fr 1fr 1fr 1fr 1fr 1fr
+
+	.rents__title
+		@media screen and (min-width: $xs) and (max-width: $lg - 1)
+			grid-row-start: 1
+			grid-row-end: 2
+			grid-column-start: 1
+			grid-column-end: 2
+			text-align: center
+			@media screen and (min-width: $xs) and (max-width: $md - 1)
+				align-self: start
+				margin-top: 50px
+			@media screen and (min-width: $md) and (max-width: $lg - 1)
+				align-self: start
+		@media screen and (min-width: $lg)
+			grid-row-start: 1
+			grid-row-end: 2
+			grid-column-start: 1
+			grid-column-end: 2
+			text-align: center
+			align-self: start
+			@media screen and (min-width: $xxl)
+				margin-top: 40px
+
+	.rents__text
+		@media screen and (min-width: $xs) and (max-width: $lg - 1)
+			grid-row-start: 1
+			grid-row-end: 2
+			grid-column-start: 1
+			grid-column-end: 2
+			text-align: center
+			@media screen and (min-width: $xs) and (max-width: $md - 1)
+				align-self: end
+				h5
+					margin-bottom: 50px
+			@media screen and (min-width: $md) and (max-width: $lg - 1)
+				align-self: end
+		@media screen and (min-width: $lg)
+			grid-row-start: 1
+			grid-row-end: 2
+			grid-column-start: 1
+			grid-column-end: 2
+			text-align: center
+			align-self: end
+
+	.rents-1
+		@media screen and (min-width: $xs) and (max-width: $lg - 1)
+			grid-row-start: 2
+			grid-row-end: 3
+			grid-column-start: 1
+			grid-column-end: 2
+			width: 100%
+		@media screen and (min-width: $lg)
+			grid-row-start: 2
+			grid-row-end: 3
+			grid-column-start: 1
+			grid-column-end: 2
+			text-align: center
+
+	.rents-2
+		@media screen and (min-width: $xs) and (max-width: $lg - 1)
+			grid-row-start: 3
+			grid-row-end: 4
+			grid-column-start: 1
+			grid-column-end: 2
+			width: 100%
+		@media screen and (min-width: $lg)
+			grid-row-start: 3
+			grid-row-end: 4
+			grid-column-start: 1
+			grid-column-end: 2
+			text-align: center
+
+	.rents-3
+		@media screen and (min-width: $xs) and (max-width: $lg - 1)
+			grid-row-start: 4
+			grid-row-end: 5
+			grid-column-start: 1
+			grid-column-end: 2
+			width: 100%
+		@media screen and (min-width: $lg)
+			grid-row-start: 4
+			grid-row-end: 5
+			grid-column-start: 1
+			grid-column-end: 2
+			text-align: center
+
+	.rents-4
+		@media screen and (min-width: $xs) and (max-width: $lg - 1)
+			grid-row-start: 5
+			grid-row-end: 6
+			grid-column-start: 1
+			grid-column-end: 2
+			width: 100%
+		@media screen and (min-width: $lg)
+			grid-row-start: 5
+			grid-row-end: 6
+			grid-column-start: 1
+			grid-column-end: 2
+			text-align: center
+
+	.rents-5
+		@media screen and (min-width: $xs) and (max-width: $lg - 1)
+			grid-row-start: 6
+			grid-row-end: 7
+			grid-column-start: 1
+			grid-column-end: 2
+			width: 100%
+		@media screen and (min-width: $lg)
+			grid-row-start: 6
+			grid-row-end: 7
+			grid-column-start: 1
+			grid-column-end: 2
+			text-align: center
+
+	.rents-6
+		@media screen and (min-width: $xs) and (max-width: $lg - 1)
+			grid-row-start: 7
+			grid-row-end: 8
+			grid-column-start: 1
+			grid-column-end: 2
+			width: 100%
+		@media screen and (min-width: $lg)
+			grid-row-start: 7
+			grid-row-end: 8
+			grid-column-start: 1
+			grid-column-end: 2
+			text-align: center
+
+	.rents-1, .rents-2, .rents-3, .rents-4, .rents-5, .rents-6, .rents-7
+		display: grid
+		@media screen and (min-width: $xs) and (max-width: $md - 1)
+			grid-template-rows: 200px
+			grid-template-columns: 1fr
+			margin: 20px 0 
+		@media screen and (min-width: $md) and (max-width: $lg - 1)
+			grid-template-rows: 300px
+			grid-template-columns: 1fr
+			margin: 20px 0
+		@media screen and (min-width: $lg) and (max-width: $xl - 1)
+			grid-template-rows: 234px
+			grid-template-columns: 1fr 1.5fr
+		@media screen and (min-width: $xl) and (max-width: $xxl - 1)
+			grid-template-rows: 275px
+			grid-template-columns: 1fr 1.5fr
+		@media screen and (min-width: $xxl)
+			grid-template-rows: 304px
+			grid-template-columns: 1fr 1.5fr
+
+
+	.rents__photo-1, .rents__photo-2, .rents__photo-3, .rents__photo-4, .rents__photo-5, .rents__photo-6, .rents__photo-7
+		@media screen and (min-width: $xs) and (max-width: $lg - 1)
+			grid-row-start: 1
+			grid-row-end: 2
+			grid-column-start: 1
+			grid-column-end: 2
+			overflow: hidden
+			display: flex
+			@media screen and (min-width: $xs) and (max-width: $md - 1)
+				margin: 0 -1em // Sair da box
+			@media screen and (min-width: $md) and (max-width: $lg - 1)
+				margin: 0 -3.5em
+			img
+				width: 100%
+				height: auto
+				align-self: center
+		@media screen and (min-width: $lg)
+			grid-row-start: 1
+			grid-row-end: 2
+			grid-column-start: 1
+			grid-column-end: 2
+			overflow: hidden
+			border: 1px solid $dark-blue
+			img
+				max-width: 100%
+				height: 100%
+				width: 100%
+
+	.rents__text-1, .rents__text-2, .rents__text-3, .rents__text-4, .rents__text-5, .rents__text-6
+		@media screen and (min-width: $xs) and (max-width: $lg - 1)
+			grid-row-start: 1
+			grid-row-end: 2
+			grid-column-start: 1
+			grid-column-end: 2
+			align-self: center
+			text-align: center
+			@media screen and (min-width: $xs) and (max-width: $md - 1)
+				margin: 0 -1em // Sair da box
+			@media screen and (min-width: $md) and (max-width: $lg - 1)
+				margin: 0 -3.5em
+		@media screen and (min-width: $lg)
+			grid-row-start: 1
+			grid-row-end: 2
+			grid-column-start: 2
+			grid-column-end: 3 
+
+	.rents__text-1, .rents__text-4
+		@media screen and (min-width: $xs) and (max-width: $lg - 1)
+			background-color: rgba(14,51,86, 0.6)
+	.rents__text-2, .rents__text-5
+		@media screen and (min-width: $xs) and (max-width: $lg - 1)
+			background-color: rgba(0,85,163, 0.6)
+	.rents__text-3, .rents__text-6
+		@media screen and (min-width: $xs) and (max-width: $lg - 1)
+			background-color: rgba(108,189,234, 0.6)
+
+	/* Grid */
+
+	.rents__text-1, .rents__text-2, .rents__text-3, .rents__text-4, .rents__text-5, .rents__text-6
+		@media screen and (min-width: $lg)
+			display: grid
+			grid-template-rows: 1fr 1fr 3fr
+			grid-template-columns: 1fr
+
+	.elem-11, .elem-21, .elem-31, .elem-41, .elem-51, .elem-61
+		@media screen and (min-width: $xs) and (max-width: $lg - 1)
+			margin-bottom: -25px
+		@media screen and (min-width: $lg)
+			grid-row-start: 1
+			grid-row-end: 2
+			grid-column-start: 1
+			grid-column-end: 2
+			margin-left: 20px
+			align-self: center
+			text-align: left
+
+	.elem-13, .elem-23, .elem-33, .elem-43, .elem-53, .elem-63
+		grid-row-start: 3
+		grid-row-end: 4
+		grid-column-start: 1
+		grid-column-end: 2
+		margin-left: 20px
+		align-self: start
+		text-align: left
+
+	.elem-121, .elem-122, .elem-221, .elem-222, .elem-321, .elem-322, .elem-421, .elem-422, .elem-521, .elem-522, .elem-621, .elem-622
+		display: inline
+		margin-right: 10px
+
+
+	.elem-12, .elem-22, .elem-32, .elem-42, .elem-52, .elem-62
+		@media screen and (min-width: $xs) and (max-width: $lg - 1)
+			position: relative
+			text-align: left
+			padding: 10px 0 5px 0
+			bottom: -81px
+			color: $dark-blue													//	<---------- ESPERAR PELAS FOTOS ORIGINAIS
+			background-color: rgba(255, 255, 255, 0.8)//	<----------
+			p, i
+				position: relative
+				@media screen and (min-width: $xs) and (max-width: $md - 1)
+					left: 20px
+				@media screen and (min-width: $md)
+					left: 60px
+			@media screen and (min-width: $md) and (max-width: $lg - 1)
+				top: 129px
+		@media screen and (min-width: $lg)
+			grid-row-start: 2
+			grid-row-end: 3
+			grid-column-start: 1
+			grid-column-end: 2
+			margin-left: 20px
+			align-self: center
+			text-align: left
+
+
+
+
+
+
+

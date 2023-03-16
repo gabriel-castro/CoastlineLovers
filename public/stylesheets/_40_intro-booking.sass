@@ -1,0 +1,231 @@
+#intro__booking
+	display: grid
+	@media screen and (min-width: $xs) and (max-width: $md - 1)
+		grid-template-columns: 1fr
+		grid-template-rows: 2fr 1fr 2.5fr 2.5fr 1fr
+	@media screen and (min-width: $md) and (max-width: $lg - 1)
+		grid-template-columns: 1fr
+		grid-template-rows: 1fr 0.5fr 1fr 0.5fr 0.5fr
+	@media screen and (min-width: $lg) and (max-width: $xxl - 1)
+		grid-template-columns: 1.5fr 4fr
+		grid-template-rows: 1fr 2fr 1fr 1fr
+	@media screen and (min-width: $xxl)
+		grid-template-columns: 1.5fr 4fr
+		grid-template-rows: 1fr 2fr 0.8fr 0.7fr
+
+.cll__logo
+	grid-row-start: 1
+	grid-row-end: 2
+	grid-column-start: 1
+	grid-column-end: 2
+	text-align: center
+	align-self: center
+	img
+		@media screen and (min-width: $xs) and (max-width: $md - 1)
+			max-width: 100%
+			height: auto
+		@media screen and (min-width: $md) and (max-width: $lg - 1)
+			width: 80%
+			height: auto
+		@media screen and (min-width: $lg)
+			max-width: 100%
+			height: auto
+			margin-left: -70px
+
+.cll__title
+	color: $dark-blue
+	align-self: center
+	h1
+		margin: 0
+	@media screen and (min-width: $xs) and (max-width: $lg - 1)
+		grid-row-start: 2
+		grid-row-end: 3
+		grid-column-start: 1
+		grid-column-end: 2
+	@media screen and (min-width: $lg)
+		grid-row-start: 1
+		grid-row-end: 2
+		grid-column-start: 2
+		grid-column-end: 3
+		h1
+			text-align: left
+			font-size: 40px
+
+
+.cll__photos
+	align-self: center
+	@media screen and (min-width: $xs) and (max-width: $lg - 1)
+		grid-row-start: 3
+		grid-row-end: 4
+		grid-column-start: 1
+		grid-column-end: 2
+	@media screen and (min-width: $lg)
+		grid-row-start: 2
+		grid-row-end: 3
+		grid-column-start: 1
+		grid-column-end: 3
+
+	.slideshow-container div
+		box-sizing: border-box
+
+	/* Slideshow container */
+	.slideshow-container
+	  max-width: 100%
+	  position: relative
+	  margin: auto
+
+	/* Hide the images by default */
+	.mySlides
+	  display: none
+	  overflow: hidden
+	  @media screen and (min-width: $xs) and (max-width: $md - 1)
+	  	height: 275px
+	  @media screen and (min-width: $md) and (max-width: $lg - 1)
+	  	height: 325px
+	  @media screen and (min-width: $lg) and (max-width: $xl - 1)
+  		height: 375px
+  	@media screen and (min-width: $xl) and (max-width: $xxl - 1)
+  		height: 425px
+  	@media screen and (min-width: $xxl)
+  		height: 575px
+	  img
+	  	position: relative
+	  	@media screen and (min-width: $xs) and (max-width: $md - 1)
+		  	width: auto
+	  		height: 100%
+		  	top: 0px
+		  @media screen and (min-width: $md) and (max-width: $lg - 1)
+			  width: 100%
+		  	height: auto
+		  	top: -70px
+		  @media screen and (min-width: $lg) and (max-width: $xxl - 1)
+		  	width: 100%
+	  		height: auto
+	  		top: -120px
+	  	@media screen and (min-width: $xxl)
+		  	width: 100%
+	  		height: auto
+	  		text-align: center
+	  		@media screen and (min-width: 1575px)
+	  			top: -200px
+
+	/* Next & previous buttons */
+	.prev, .next
+	  cursor: pointer
+	  position: absolute
+	  top: 50%
+	  width: auto
+	  margin-top: -22px
+	  padding: 16px
+	  color: white
+	  font-weight: bold
+	  font-size: 18px
+	  transition: 0.6s ease
+	  border-radius: 0 3px 3px 0
+	  user-select: none
+
+	/* Position the "next button" to the right */
+	.next
+	  right: 0
+	  border-radius: 3px 0 0 3px
+
+	.prev:hover, .next:hover
+	  background-color: rgba(0,0,0,0.8)
+
+	.dots-menu
+	  position: relative
+	  z-index: 10
+	  //@media screen and (min-width: $xs) and (max-width: $xxl - 1)
+	  margin-top: -50px
+	  //@media screen and (min-width: $xxl)
+	  	//margin-top: -150px
+
+	.dot
+	  cursor: pointer
+	  height: 15px
+	  width: 15px
+	  margin: 0 2px
+	  background-color: $white
+	  border-radius: 50%
+	  display: inline-block
+	  transition: background-color 0.6s ease 
+
+	.active, .dot:hover
+	  background-color: $gold
+
+	/* Fading animation */
+	.fade
+	  -webkit-animation-name: fade
+	  -webkit-animation-duration: 1.5s
+	  animation-name: fade
+	  animation-duration: 1.5s
+
+	@-webkit-keyframes fade
+	  from
+	  	opacity: .4
+	  to
+	  	opacity: 1
+
+	@keyframes fade
+	  from
+	  	opacity: .4
+	  to
+	  	opacity: 1
+
+.cll__description
+	align-self: center
+	@media screen and (min-width: $xs) and (max-width: $lg - 1)
+		grid-row-start: 4
+		grid-row-end: 5
+		grid-column-start: 1
+		grid-column-end: 2
+		h4
+			text-align: center
+	@media screen and (min-width: $lg)
+		grid-row-start: 3
+		grid-row-end: 4
+		grid-column-start: 1
+		grid-column-end: 3
+		margin-top: 30px
+		h4, p
+			text-align: left
+	
+
+.staff
+	align-self: center
+	@media screen and (min-width: $xs) and (max-width: $lg - 1)
+		grid-row-start: 5
+		grid-row-end: 6
+		grid-column-start: 1
+		grid-column-end: 2
+		text-align: center
+	@media screen and (min-width: $lg)
+		grid-row-start: 4
+		grid-row-end: 5
+		grid-column-start: 1
+		grid-column-end: 3
+		text-align: center
+
+	.staff__input
+		text-align: center
+		margin-top: 20px
+		font-size: 16px
+		padding: 7px 10px
+		border-color: $dark-blue
+		@media screen and (min-width: $xs) and (max-width: $smp - 1)
+			width: 65%
+		@media screen and (min-width: $smp) and (max-width: $lg - 1)
+			width: 50%
+		@media screen and (min-width: $lg)
+			width: 25%
+
+	h4
+		color: $dark-blue
+		margin: 20px 0 10px 0
+
+
+
+
+
+
+

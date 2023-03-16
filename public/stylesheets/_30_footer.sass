@@ -1,0 +1,257 @@
+#footer
+	background-color: $dark-blue
+
+	/* 1st LEVEL Grid */
+	.footer__box
+		display: grid
+		@media screen and (min-width: $xs) and (max-width: $md - 1)
+			grid-template-rows: 1fr 1fr 2fr 1fr
+			grid-template-columns: 1fr
+		@media screen and (min-width: $md)
+			grid-template-rows: 4fr 1fr
+			grid-template-columns: 1fr 1fr 1fr
+
+	.footer__logo
+		@media screen and (min-width: $xs) and (max-width: $md - 1)
+			grid-row-start: 1
+			grid-row-end: 2
+			grid-column-start: 1
+			grid-column-end: 2
+			justify-self: center
+		@media screen and (min-width: $md)
+			grid-row-start: 1
+			grid-row-end: 2
+			grid-column-start: 2
+			grid-column-end: 3
+			justify-self: center
+			align-self: center
+		img
+			height: auto
+			margin-bottom: 20px
+			@media screen and (min-width: $xs) and (max-width: $md - 1)
+				width: 150px
+			@media screen and (min-width: $md)
+				width: 100%
+				max-width: 375px
+
+	.footer__info
+		@media screen and (min-width: $xs) and (max-width: $md - 1)
+			grid-row-start: 2
+			grid-row-end: 3
+			grid-column-start: 1
+			grid-column-end: 2
+		@media screen and (min-width: $md)
+			grid-row-start: 1
+			grid-row-end: 2
+			grid-column-start: 1
+			grid-column-end: 2
+			justify-self: center
+
+	.footer__nav
+		@media screen and (min-width: $xs) and (max-width: $md - 1)
+			grid-row-start: 3
+			grid-row-end: 4
+			grid-column-start: 1
+			grid-column-end: 2
+		@media screen and (min-width: $md)
+			grid-row-start: 1
+			grid-row-end: 2
+			grid-column-start: 3
+			grid-column-end: 4
+			justify-self: center
+
+	.footer__icons
+		@media screen and (min-width: $xs) and (max-width: $md - 1)
+			grid-row-start: 4
+			grid-row-end: 5
+			grid-column-start: 1
+			grid-column-end: 2
+		@media screen and (min-width: $md)
+			grid-row-start: 2
+			grid-row-end: 3
+			grid-column-start: 2
+			grid-column-end: 3
+			justify-self: center
+
+	/* 2nd LEVEL Grid */
+	.footer__info
+		display: grid
+		grid-template-columns: 1fr
+		@media screen and (min-width: $xs) and (max-width: $md - 1)
+			grid-template-rows: 2fr 1fr 1fr 1fr
+		@media screen and (min-width: $md)
+			grid-template-rows: 2fr 1fr 1fr 1fr 1fr 1fr
+
+	.footer__maisinfo
+		justify-self: center
+		@media screen and (min-width: $xs) and (max-width: $md - 1)
+			grid-row-start: 1
+			grid-row-end: 2
+			grid-column-start: 1
+			grid-column-end: 2
+		@media screen and (min-width: $md)
+			grid-row-start: 1
+			grid-row-end: 2
+			grid-column-start: 1
+			grid-column-end: 2
+			align-self: center
+
+	.footer__phone
+		justify-self: center
+		@media screen and (min-width: $xs) and (max-width: $md - 1)
+			grid-row-start: 2
+			grid-row-end: 3
+			grid-column-start: 1
+			grid-column-end: 2
+		@media screen and (min-width: $md)
+			grid-row-start: 2
+			grid-row-end: 3
+			grid-column-start: 1
+			grid-column-end: 2
+			align-self: start
+
+	.footer__email
+		justify-self: center
+		@media screen and (min-width: $xs) and (max-width: $md - 1)
+			grid-row-start: 3
+			grid-row-end: 4
+			grid-column-start: 1
+			grid-column-end: 2
+		@media screen and (min-width: $md)
+			grid-row-start: 3
+			grid-row-end: 4
+			grid-column-start: 1
+			grid-column-end: 2
+			align-self: start
+
+	.footer__street
+		justify-self: center
+		text-align: center
+		@media screen and (min-width: $xs) and (max-width: $md - 1)
+			grid-row-start: 4
+			grid-row-end: 5
+			grid-column-start: 1
+			grid-column-end: 2
+		@media screen and (min-width: $md)
+			grid-row-start: 4
+			grid-row-end: 5
+			grid-column-start: 1
+			grid-column-end: 2
+			align-self: start
+			
+
+	/* 2nd LEVEL Grid */
+	.footer__nav
+		display: grid
+		grid-template-rows: 2fr 1fr 1fr 1fr 1fr 1fr
+		grid-template-columns: 1fr
+
+	.footer__menu
+		grid-row-start: 1
+		grid-row-end: 2
+		grid-column-start: 1
+		grid-column-end: 2
+		align-self: center
+		justify-self: center
+
+	.footer__about
+		grid-row-start: 2
+		grid-row-end: 3
+		grid-column-start: 1
+		grid-column-end: 2
+		justify-self: center
+
+	.footer__tours
+		grid-row-start: 3
+		grid-row-end: 4
+		grid-column-start: 1
+		grid-column-end: 2
+		justify-self: center
+
+	.footer__rents
+		grid-row-start: 4
+		grid-row-end: 5
+		grid-column-start: 1
+		grid-column-end: 2
+		justify-self: center
+
+	.footer__testimonials
+		grid-row-start: 5
+		grid-row-end: 6
+		grid-column-start: 1
+		grid-column-end: 2
+		justify-self: center
+
+	.footer__gallery
+		grid-row-start: 6
+		grid-row-end: 7
+		grid-column-start: 1
+		grid-column-end: 2
+		justify-self: center
+
+	.footer__contacts
+		grid-row-start: 7
+		grid-row-end: 8
+		grid-column-start: 1
+		grid-column-end: 2
+		justify-self: center
+
+	/* 2nd LEVEL Grid */
+	.footer__icons
+		display: grid
+		grid-template-rows: 1fr
+		margin: 35px 0 0 0
+		@media screen and (min-width: $xs) and (max-width: $md - 1)
+			grid-template-columns: 1fr 1fr 1fr
+		@media screen and (min-width: $md)
+			grid-template-columns: 2fr 1fr 2fr
+
+	.footer__icon-1
+		grid-row-start: 1
+		grid-row-end: 2
+		grid-column-start: 1
+		grid-column-end: 2
+		@media screen and (min-width: $xs) and (max-width: $md - 1)
+			justify-self: right
+		@media screen and (min-width: $md)
+			justify-self: left
+
+	.footer__icon-2
+		grid-row-start: 1
+		grid-row-end: 2
+		grid-column-start: 2
+		grid-column-end: 3
+		justify-self: center
+
+	.footer__icon-3
+		grid-row-start: 1
+		grid-row-end: 2
+		grid-column-start: 3
+		grid-column-end: 4
+		@media screen and (min-width: $xs) and (max-width: $md - 1)
+			justify-self: left
+		@media screen and (min-width: $md)
+			justify-self: right
+
+#trademark
+	display: grid
+	grid-template-rows: 1fr
+	grid-template-columns: 1fr 1.3fr
+	p
+		position: relative
+		z-index: 10
+
+.trade-1
+	grid-row-start: 1
+	grid-row-end: 2	
+	grid-column-start: 1
+	grid-column-end: 2
+
+.trade-2
+	grid-row-start: 1
+	grid-row-end: 2
+	grid-column-start: 2
+	grid-column-end: 3
+		
+
+

@@ -1,0 +1,58 @@
+.button
+	border: 1.25px solid $dark-blue
+	border-radius: 10px
+	background-color: $dark-blue
+
+.book-button
+	background-color: $dark-blue
+	color: $gold
+	padding: 10px 30px
+	text-align: center
+	border: 1.25px solid $dark-blue
+
+.book-button:hover
+	background-color: $gold
+	color: $dark-blue
+	padding: 10px 30px
+	text-align: center
+	border: 1.25px solid $dark-blue
+
+#header
+	.button
+		@media screen and (min-width: $xs) and (max-width: $md - 1)
+			padding: 10px 20px
+		@media screen and (min-width: $md)
+			padding: 15px 30px
+
+
+#gallery
+	.button
+		border: 1.25px solid $pink
+		border-radius: 10px
+		background-color: $pink
+		color: $white
+		@media screen and (min-width: $xs) and (max-width: $md - 1)
+			padding: 10px 20px
+		@media screen and (min-width: $md)
+			padding: 15px 30px
+
+#booking
+
+
+/* REMOVE ARROW "UP & DOWN" ON BUTTONS */
+
+/* Chrome, Safari, Edge, Opera */
+.btick__input-2::-webkit-outer-spin-button, .btick__input-5::-webkit-outer-spin-button, .btick__input-8::-webkit-outer-spin-button
+	-webkit-appearance: none
+	margin: 0
+
+.btick__input-2::-webkit-inner-spin-button, .btick__input-5::-webkit-inner-spin-button, .btick__input-8::-webkit-inner-spin-button
+	-webkit-appearance: none
+	margin: 0
+
+/* Firefox */
+.btick__input-2[type=number], .btick__input-5[type=number], .btick__input-8[type=number]
+	-moz-appearance: textfield
+
+
+

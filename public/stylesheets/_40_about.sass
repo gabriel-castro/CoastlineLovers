@@ -1,0 +1,80 @@
+#about	
+	.about__box
+		display: grid
+		grid-template-columns: 1fr
+		@media screen and (min-width: $xs) and (max-width: $md - 1)
+			grid-template-rows: 0.7fr 3fr 2fr
+		@media screen and (min-width: $md) and (max-width: $lg - 1)
+			grid-template-rows: 1fr 2fr 2fr
+		@media screen and (min-width: $lg) and (max-width: $xl - 1)
+			grid-template-rows: 1fr 2.5fr 2.5fr
+		@media screen and (min-width: $xl) and (max-width: $xxl - 1)
+			grid-template-rows: 1fr 2fr 2.5fr
+		@media screen and (min-width: $xxl)
+			grid-template-rows: 1fr 2fr 3fr
+
+	.about__title
+		grid-row-start: 1
+		grid-row-end: 2
+		grid-column-start: 1
+		grid-column-end: 2
+		text-align: center
+		@media screen and (min-width: $xs) and (max-width: $lg - 1)
+			align-self: end
+		@media screen and (min-width: $lg)
+			align-self: end
+		
+
+	.about__text
+		grid-row-start: 2
+		grid-row-end: 3
+		grid-column-start: 1
+		grid-column-end: 2
+		text-align: justify
+		@media screen and (min-width: $xs) and (max-width: $md - 1)
+			align-self: start
+		@media screen and (min-width: $md) and (max-width: $lg - 1)
+			align-self: center
+		@media screen and (min-width: $lg) and (max-width: $xl - 1)
+			align-self: start
+		@media screen and (min-width: $xl)
+			align-self: start
+	
+	.about__map	
+		grid-row-start: 3
+		grid-row-end: 4
+		grid-column-start: 1
+		grid-column-end: 2
+		@media screen and (min-width: $xs) and (max-width: $md - 1)
+			margin: 0 -1em 0 -1em
+			align-self: center
+		@media screen and (min-width: $md) and (max-width: $lg - 1)
+			margin: 0 -3.4em 0 -3.4em
+			align-self: center
+		@media screen and (min-width: $lg) and (max-width: $xl - 1)
+			justify-self: center
+			align-self: center
+		@media screen and (min-width: $xl) and (max-width: $xxl - 1)
+			justify-self: center
+			align-self: center
+		@media screen and (min-width: $xxl)
+			justify-self: center
+			align-self: end
+
+		img
+			@media screen and (min-width: $xs) and (max-width: $lg - 1)
+				width: 100%
+				height: auto
+			@media screen and (min-width: $lg) and (max-width: $xl - 1)
+				width: 100% //730px
+				max-width: 900px
+				height: auto
+			@media screen and (min-width: $xl) and (max-width: $xxl - 1)
+				width: 900px
+				height: auto
+			@media screen and (min-width: $xxl)
+				width: 1000px
+				height: auto
+
+
+

@@ -1,0 +1,230 @@
+#booking
+	background-color: $light-gold
+	padding-bottom: 1px
+	h5
+		margin: 0
+		padding: 0
+
+	.admin-page
+		background-color: transparent
+
+.book__title, .book__info
+	background-color: $dark-blue
+	color: $gold
+	width: 100%
+	padding: 10px 0
+	text-align: center
+
+.book__title, .book__calendar, .book__tour, .book__schedule, .book__tickets, .book__name, .book__email, .book__phone, .book__notes, .book__code, .book__button
+	margin: 35px 0 35px 0
+
+.bcal__title, .btour__title, .bsch__title, .btick__title
+	color: $dark-blue
+	text-align: center
+
+.bname__title, .bemail__title, .bphone__title, .bnotes__title, .bcode__title
+	color: $dark-blue
+	text-align: left
+
+
+.book__calendar
+	text-align: center
+
+	.bcal__input
+		margin-top: 20px
+		padding: 7px 0
+		text-align: center
+		font-size: 18px
+		background-color: $light-gold
+		border-color: $dark-blue
+		@media screen and (min-width: $xs) and (max-width: $smp - 1)
+			width: 68%
+		@media screen and (min-width: $smp) and (max-width: $lg - 1)
+			width: 53%
+		@media screen and (min-width: $lg)
+			width: 28%
+
+.book__tour
+	@media screen and (min-width: $xs) and (max-width: $lg - 1)
+		text-align: left
+	@media screen and (min-width: $lg)
+		text-align: center
+
+	.btour__input-1, .btour__input-3, .btour__p-1, .btour__p-3, .btour__a-1
+		@media screen and (min-width: $lg)
+			position: relative
+			left: -30px
+
+	.btour__input-1, .btour__input-2, .btour__input-3
+		display: inline 
+		margin: 20px 0 10px 40px
+		text-align: center
+		height: 18px
+		width: 6%
+
+	.btour__p-1, .btour__p-2, .btour__p-3
+		display: inline
+
+
+.book__schedule
+	@media screen and (min-width: $lg)
+		text-align: center
+
+	.bsch__input-1, .bsch__input-2, .bsch__input-3, .bsch__input-4, .bsch__input-5, .bsch__input-6, .bsch__input-7
+		display: inline 
+		margin: 20px 0 10px 40px
+		text-align: center
+		height: 18px
+		width: 6%
+
+	.bsch__input-1, .bsch__p-1, .bsch__a-1
+		@media screen and (min-width: $lg)
+			position: relative
+			left: -6px
+
+	.bsch__p-1, .bsch__p-2, .bsch__p-3, .bsch__p-4, .bsch__p-5, .bsch__p-6, .bsch__p-7
+		display: inline
+		margin: 0 0 0 5px
+
+
+.book__tickets
+
+	.btick__priv, .btick__adult, .btick__kid, .btick__baby
+		margin: 20px 0 10px 0
+		text-align: center
+
+	.btick__priv, .btick__normal, .btick__express, .btick__kidnormal, .btick__kidexp, .btick__free
+		margin-bottom: 10px
+
+	
+	.btick__p-1, .btick__p-2, .btick__p-3, .btick__p-4, .btick__p-5, .btick__p-6
+		margin-bottom: 0
+
+
+	.btick__input-1, .btick__input-4, .btick__input-7
+		margin-right: -4px
+		padding: 5px 10px
+		background-color: $dark-blue 
+		color: $gold
+		border-color: $dark-blue
+
+	.btick__input-2, .btick__input-5, .btick__input-8
+		padding: 4px 0px
+		text-align: center
+		width: 15%
+
+	.btick__input-3, .btick__input-6, .btick__input-9
+		margin-left: -4px
+		padding: 5px 10px
+		background-color: $dark-blue 
+		color: $gold
+		border-color: $dark-blue
+
+
+.book__name, .book__email, .book__phone, .book__notes, .book__code, .book__button
+	padding: 0 20px 0 20px
+	margin: 40px 0 
+
+.bname__input-1, .bname__input-2, .bemail__input-1, .bphone__input-1, .bcode__input-1
+	padding: 7px 0
+	width: 85%
+	text-align: left
+	font-size: 18px
+	background-color: transparent
+	border: 0
+	border-bottom: 1.75px solid $dark-blue
+
+.bname__input-2
+	margin-top: 15px
+
+.bname__input-1, .bemail__input-1, .iti, .bnotes__input-1, .bcode__input-1 
+	// A classe .iti tá a fazer de .bphone__input-1 
+	margin-top: 5px
+
+.bnotes__input-1
+	width: 98%
+	max-width: 100%
+	height: 100px
+	background-color: $light-gold
+	border: 1.75px solid $dark-blue
+
+
+.book__xlview__grid
+	@media screen and (min-width: $xl)
+		display: grid
+		grid-template-rows: 1.25fr 1fr 1fr 
+		grid-template-columns: 1fr 1fr
+
+	.book__name
+		@media screen and (min-width: $xl)
+			grid-row-start: 1
+			grid-row-end: 2
+			grid-column-start: 1
+			grid-column-end: 2
+
+	.book__email
+		@media screen and (min-width: $xl)
+			grid-row-start: 2
+			grid-row-end: 3
+			grid-column-start: 1
+			grid-column-end: 2
+
+	.book__phone
+		@media screen and (min-width: $xl)
+			grid-row-start: 3
+			grid-row-end: 4
+			grid-column-start: 1
+			grid-column-end: 2
+
+	.book__notes
+		@media screen and (min-width: $xl)
+			grid-row-start: 1
+			grid-row-end: 4
+			grid-column-start: 2
+			grid-column-end: 3
+			.bnotes__input-1
+				height: 90%
+
+.book__code
+	@media screen and (min-width: $xl)
+		text-align: center
+
+		.bcode__title 
+			text-align: center
+
+		.bcode__input-1
+			width: 50%	
+
+.book__button
+	text-align: center
+
+
+
+
+
+.book__email
+
+.book__phone
+
+.book__notes
+
+.book__code
+
+
+
+.bemail__input-1, .bphone__input-1, .bcode__input-1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

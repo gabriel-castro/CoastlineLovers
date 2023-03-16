@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+	<title>Pagina Admin CoastLineLovers</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+	<link rel="manifest" href="assets/site.webmanifest">
+	<!-- CSS -->
+	<link rel="stylesheet" href="../stylesheets/style/style.css" />
+	<link rel="stylesheet" href="../stylesheets/date_pick.css" />
+	<!-- Indicativo Telm -->
+	<link rel="stylesheet" href="stylesheets/intlTelInput.css">
+	<!-- Stripe -->
+	<script src="https://checkout.stripe.com/checkout.js" defer></script>
+	<!-- JS -->
+	<script src="javascripts/main.js" defer></script>
+	<script src="../javascripts/translateBooking.js" ></script>
+	<!-- JS_all --> 
+	<script src="javascripts/jquery-1.10.2.js" type="text/javascript"></script>
+	<script src="javascripts/bootstrap-datepicker.js"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="javascripts/intlTelInput.js"></script>
+	<!-- MAILCHIMP -->
+	<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/0bb19c317e4be0732494c6c1f/f6049fb8f0ea58e3efa58201b.js");</script>
+</head>
+<body>
+    <div id="admin-login">
+        <label>Admin: </label>
+        <input id="adminuserField" type="text" name="field1" class="field-divided" placeholder="Utilizador"  onkeyup="adminCheck();"/> 
+        <input id="adminpwField" type="password" name="field2" class="field-divided" placeholder="Palavra-chave"  onkeyup="adminCheck();"/>
+    </div>
+	<div id="adminpage" style="display:none;">
+		<input type="radio" name="admin" value="3" onclick="adminrChange('3');" checked> Modificar dados<br> 
+		<input type="radio" name="admin" value="2" onclick="adminrChange('2');"> Eliminar reservas<br>
+		<input type="radio" name="admin" value="4" onclick="adminrChange('4');"> Inserir reserva<br> <br><br>
+		<div id="div_search">	Pesquisar por:<br>
+			ID:<input id="idField" type="text" name="field1" class="" size="8" placeholder=" 1234" onkeyup="textEnter()" autocomplete="off"/>
+			Primeiro Nome:<input id="fNameField" type="text" name="field1" class="" size="8" placeholder=" Jorge" onkeyup="textEnter()" autocomplete="off"/>
+			Último Nome:<input id="lNameField" type="text" name="field1" class="" size="8" placeholder=" Almeida" onkeyup="textEnter()" autocomplete="off"/>
+			Email:<input id="emailField" type="text" name="field1" class="" size="30" placeholder=" exemplo@cll.pt" onkeyup="textEnter()" autocomplete="off"/>
+			Telefone:<input id="telField" type="text" name="field1" class="" size="10" placeholder=" 931231231" onkeyup="textEnter()" autocomplete="off"/>
+			Tour:<select id="tourField" onkeyup="textEnter()">
+				<option value="" selected disabled hidden> Escolha o tour</option>
+				<option value="normal" > Normal</option>
+				<option value="private" > Private</option>
+				<option value="express" > Express</option>
+			</select>
+			Data:<input id="dateField" type="text" name="field1" class="datepicker" size="8" placeholder=" 2020-01-30" onkeyup="textEnter()" autocomplete="off"/><br><br>
+			<button type="button" onclick="textEnter('btn');">Pesquisar</button>
+			<br><br>
+			_____________________________________________________________________________________________________________________________________________________________
+			<br><br>
+		</div>
+		<div id="modBookings" style="display:none;">
+			Novos dados:<br>
+			Nome:<input id="newfNameField" type="text" name="field1" size="8" placeholder=" Jorge" autocomplete="off"/> 
+					  <input id="newlNameField" type="text" name="field1" size="8" placeholder=" Almeida" autocomplete="off"/>
+			Email:<input id="newemailField" type="text" name="field1" size="30" placeholder=" novoEmail@cll.pt" autocomplete="off"/>
+			Telefone:<input id="newtelField" type="text" name="field1" size="10" placeholder=" 931231231" autocomplete="off"/>
+			Tour:<select id="newtourField">
+				<option value="same" > </option>
+				<option value="normal" > Normal</option>
+				<option value="private" > Private</option>
+				<option value="express" > Express</option>
+			</select>
+			Adultos:<select id="newfieldadults">
+				<option value="" > </option><option value="0" > 0</option><option value="1" > 1</option><option value="2" > 2</option><option value="3" > 3</option><option value="4" > 4</option>
+				<option value="5" > 5</option><option value="6" > 6</option><option value="7" > 7</option><option value="8" > 8</option><option value="9" > 9</option><option value="10" > 10</option>
+			</select>
+			Crianças:<select id="newfieldchildren">
+				<option value="" > </option><option value="0" > 0</option><option value="1" > 1</option><option value="2" > 2</option><option value="3" > 3</option><option value="4" > 4</option>
+				<option value="5" > 5</option><option value="6" > 6</option><option value="7" > 7</option><option value="8" > 8</option><option value="9" > 9</option><option value="10" > 10</option>
+			</select>
+			Bebés:<select id="newfieldbaby">
+				<option value="" > </option><option value="0" > 0</option><option value="1" > 1</option><option value="2" > 2</option><option value="3" > 3</option>
+			</select><br><br>
+			Obs:<input id="newobsField" type="text" name="field1" size="35" placeholder=" Obs" autocomplete="off"/>
+			Data:<input id="newdateField" type="text" name="field1" class="datepicker" size="8" placeholder=" 1999-01-30" autocomplete="off"/>
+			hora:
+			<select id="newtimeSelect">
+				<option value="same" > </option>
+				<option value="09h-11h" > 9h-11h</option>
+				<option value="11h-13h" > 11h-13h</option>
+				<option value="13h-14h" > 13h-14h</option>
+				<option value="14h-16h" > 14h-16h</option>
+				<option value="16h-18h" > 16h-18h</option>
+				<option value="18h-20h" > 18h-20h</option>  
+			</select>
+			A Receber:<input id="newrecField" type="text" name="field1" class="" size="4" placeholder=" 0" autocomplete="off"/>
+			A pagar:<input id="newpagField" type="text" name="field1" class="" size="4" placeholder=" 0" autocomplete="off"/><br><br>
+			<button type="button" onclick="modReservas();">Modificar dados</button><br><br>
+		</div>
+		<div id="deleteBookings" style="display:none;">
+			<button type="button" onclick="eliminarReservas();">Eliminar reserva</button><br><br>
+		</div>
+		<div id="sqlresult"></div>
+	</div>
+	<div id="insert_booking" class="admin-page" style="display:none;">
+
+		<%- include('partials/booking-partial'); -%>
+
+		<script type="text/javascript">
+			$('.datepicker').datepicker({
+				weekStart:1,
+				color: 'blue'
+			});
+			var input = document.getElementById("field4");
+			var iti = window.intlTelInput(input);
+			function getFullPhoneNumber(){
+				return "(+" + iti.getSelectedCountryData().dialCode + ")" + input.value;
+			}
+		</script>
+	</div>
+</body>
+</html>

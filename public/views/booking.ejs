@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+	<title>CoastLineLovers</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
+	<link rel="manifest" href="../assets/site.webmanifest">
+	<!-- CSS -->
+	<link rel="stylesheet" href="../stylesheets/style/style.css" />
+	<!-- Indicativo Telm -->
+	<link rel="stylesheet" href="../stylesheets/intlTelInput.css">
+	<!-- DatePicker -->
+	<link rel="stylesheet" href="../stylesheets/date_pick.css"/>
+	<!-- Stripe -->
+	<script src="https://checkout.stripe.com/checkout.js" defer></script>
+	<!-- JS -->
+	<script src="../javascripts/translateBooking.js" defer></script>
+	<script src="../javascripts/main.js" defer></script>
+	<script src="../javascripts/script-booking.js" defer></script>
+	<!-- JS_all --> 
+	<script src="../javascripts/jquery-1.10.2.js" type="text/javascript"></script>
+	<script src="../javascripts/bootstrap-datepicker.js"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="../javascripts/intlTelInput.js"></script>
+	
+</head>
+<body id="">
+	<div id="insert_booking" class="booking-page">
+
+		<div id="intro__booking" class="intro__booking">
+
+			<div class="cll__logo">
+				<img src="/assets/cll-color.png">
+			</div>
+
+			<div class="cll__title">
+				<h1>GRUTA BENAGIL TOUR</h1>
+			</div>
+
+			<div class="cll__photos">
+
+				<!-- Slideshow container -->
+				<div class="slideshow-container">
+
+				  <!-- Full-width images with number and caption text -->
+				  <div class="mySlides fade">
+				    <img src="/assets/header.jpg" style="width:100%">
+				    <!-- <div class="text">Caption Text</div> -->
+				  </div>
+
+				  <div class="mySlides fade">
+				    <img src="/assets/express-tour.jpg" style="width:100%">
+				    <!-- <div class="text">Caption Two</div> -->
+				  </div>
+
+				  <div class="mySlides fade">
+				    <img src="/assets/gruta-tour.jpg" style="width:100%">
+				    <!-- <div class="text">Caption Three</div> -->
+				  </div>
+
+				  <!-- Next and previous buttons -->
+				  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+				</div>
+				<br>
+
+				<!-- The dots/circles -->
+				<div class="dots-menu" style="text-align:center">
+				  <span class="dot" onclick="currentSlide(1)"></span>
+				  <span class="dot" onclick="currentSlide(2)"></span>
+				  <span class="dot" onclick="currentSlide(3)"></span>
+				</div>
+
+			</div>
+
+			<div class="cll__description">
+				<h4 id="description1"></h4>
+				<p id="txt-normal" style="display:block;"></p>
+				<p id="txt-private" style="display:none;"></p>
+				<p id="txt-express" style="display:none;"></p>
+			</div>
+
+			<div class="staff">
+				<h4 id="sk-txt" class="">Chave secreta: </h4>
+				<input class="staff__input field-long" id="codeField" type="password" name="field2" placeholder="Reservado ao STAFF" autocomplete="off" onchange="changeButtonName()"/><br>
+			</div>
+
+		</div>
+
+		<%- include('partials/booking-partial'); -%>
+
+		<div id="outro__booking" class="outro__booking">
+
+			<div class="cll__safety">
+
+				<div class="safety__icon">
+					<i class="fas fa-exclamation-triangle fa-inverse fa-4x"></i>
+				</div>
+
+				<div class="safety__title">
+					<h2 id="warnings1" class="">AVISOS IMPORTANTES</h2>
+				</div>
+
+				<ul class="safety__text">
+					<li id="safe-txt1">Será fornecido um colete salva-vidas.</li>
+					<li id="safe-txt2">O passeio será dirigido por um capitão experiente.</li>
+					<li id="safe-txt3">É aconselhável o uso de roupa adequada a estação do ano.</li>
+					<li id="safe-txt4">O check-in deverá ser feito <strong>30 minutos antes do passeio</strong>, no quiosque de venda de bilhetes, no <strong>Clube Naval De Portimão.</strong></li>
+					<li id="safe-txt5">Qualquer colaborador poderá pedir a identificação da criança para verificar a idade.</li>
+					<li id="safe-txt6">A empresa não se responsabiliza por bens perdidos no decorrer da tour.</li>
+					<li id="safe-txt7">O disparo do colete salva-vidas por negligência tem o custo de 30€.</li>
+					<li id="safe-txt8">A Coastline Lovers reserva o direito de cancelar o passeio se as condições atmosféricas não forem favoráveis.</li>
+					<li id="safe-txt9">Cancelamento gratuito até 24 horas antes do passeio.</li>
+				</ul>
+
+			</div>
+
+			<div class="cll__maps">
+
+				<div class="maps__icon">
+					<i class="fas fa-map-marker-alt fa-4x"></i>
+				</div>
+
+				<div class="maps__title">
+					<h2 class="">PONTO DE ENCONTRO</h2>
+				</div>
+
+				<div class="maps__map"> <!-- id="maps__map" -->
+					<iframe class="maps__frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3180.8778970300236!2d-8.536312285050174!3d37.13181987988162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1b28f12edfff31%3A0x8eef681329792461!2sClube%20Naval%20De%20Portim%C3%A3o!5e0!3m2!1sen!2spt!4v1582288089963!5m2!1sen!2spt" allowfullscreen=""></iframe>
+
+				</div>
+
+			</div>
+
+		</div>
+		<script type="text/javascript">
+			$('.datepicker').datepicker({
+				weekStart:1,
+				color: 'blue'
+			});
+			var input = document.getElementById("field4");
+			var iti = window.intlTelInput(input);
+			function getFullPhoneNumber(){
+				return "(+" + iti.getSelectedCountryData().dialCode + ")" + input.value;
+			};
+		</script>
+		<script async defer
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVP1WgmhP6p277yYP5fOB2u1eg-0uAaxE&callback=initMap">
+		</script>
+	</div>
+
+	<%- include('partials/footer'); -%>
