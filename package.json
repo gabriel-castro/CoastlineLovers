@@ -1,0 +1,46 @@
+{
+  "name": "coastline-lovers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "concurrently": "^5.1.0",
+    "cors": "^2.8.5",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "http": "^0.0.0",
+    "mysql": "^2.17.1",
+    "node-fetch": "^2.6.0",
+    "node-sass": "^4.13.1",
+    "path": "^0.12.7",
+    "readable-stream": "^2.3.7",
+    "request": "^2.88.2",
+    "sib-api-v3-sdk": "^7.1.4",
+    "stripe": "^8.18.0",
+    "sweetalert": "^2.1.2",
+    "sweetalert2": "^9.7.2"
+  },
+  "engines": {
+    "node": "12.13.0",
+    "npm": "6.12.0"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch public/stylesheets/style.scss -o public/stylesheets/style",
+    "start": "concurrently \"node server.js\" \"node-sass --watch public/stylesheets/style.scss -o public/stylesheets/style\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thediogoribeiro/coastline-lovers.git"
+  },
+  "author": "Digital Studio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thediogoribeiro/coastline-lovers/issues"
+  },
+  "homepage": "https://github.com/thediogoribeiro/coastline-lovers#readme"
+}
